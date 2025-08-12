@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #FDF8F4;
+  color: #1C1C1C;
+}
+
+header {
+  background-color: #8B6B4A;
+  padding: 1rem;
+}
+
+header h1 {
+  color: #FDF8F4;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #FDF8F4;
+  text-decoration: none;
+}
+
+.hero {
+  padding: 2rem;
+  background-color: #D9825B;
+  color: white;
+  text-align: center;
+}
+
+section {
+  padding: 2rem;
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #CFAE70;
+  color: #1C1C1C;
+  text-decoration: none;
+  border-radius: 5px;
+}
