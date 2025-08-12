@@ -1,52 +1,69 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Identidad artística y estrategias de visibilidad</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identidad artística y estrategias de visibilidad</title>
+
+    <!-- Fuente de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Estilos CSS -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #e7d8c9, #e0a96d);
+            color: #3b2f2f;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        p.subtitle {
+            font-size: 1.2rem;
+            color: #5c4033;
+        }
+
+        .audio-container {
+            background: rgba(255, 255, 255, 0.85);
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 12px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        audio {
+            width: 100%;
+            outline: none;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Identidad artística y estrategias de visibilidad</h1>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#investigacion">Investigación</a></li>
-        <li><a href="#audio">Cápsula</a></li>
-        <li><a href="#guia">Guía Estratégica</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section id="inicio" class="hero">
-    <h2>Explorando cómo los artistas construyen, comunican y proyectan su identidad en el ecosistema musical digital</h2>
-  </section>
+    <header>
+        <h1>Identidad artística y estrategias de visibilidad</h1>
+        <p class="subtitle">Dinámicas de gestión, performatividad y comunicación en plataformas sociales</p>
+    </header>
 
-  <section id="investigacion">
-    <h3>Investigación</h3>
-    <p>Este proyecto analiza cómo los artistas en la industria musical digital desarrollan su identidad artística y utilizan estrategias de visibilidad en plataformas sociales, considerando dinámicas de gestión, performatividad y comunicación.</p>
-  </section>
+    <div class="audio-container">
+        <h2>Cápsula: ¿Qué es la identidad artística?</h2>
+        <audio controls>
+            <source src="audio/identidad-artistica.mp3" type="audio/mpeg">
+            Tu navegador no soporta la reproducción de audio.
+        </audio>
+    </div>
 
-  <section id="audio">
-    <h3>Cápsula de Identidad Artística</h3>
-    <audio controls>
-      <source src="audio/identidad-artistica.mp3" type="audio/mpeg">
-      Tu navegador no soporta audio.
-    </audio>
-  </section>
-
-  <section id="guia">
-    <h3>Guía Estratégica</h3>
-    <p>Próximamente disponible para descarga en PDF.</p>
-    <a class="boton" href="#" target="_blank">Descargar PDF</a>
-  </section>
-
-  <footer id="contacto">
-    <p>© 2025 Laura Manuela Osorio - Proyecto de Maestría en Comunicación, Tecnología y Sociedad</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
