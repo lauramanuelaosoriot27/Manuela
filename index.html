@@ -4,66 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Identidad artística y estrategias de visibilidad</title>
-
-    <!-- Fuente de Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-    <!-- Estilos CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #e7d8c9, #e0a96d);
-            color: #3b2f2f;
+            background-color: #f7f3ef;
+            color: #4a3f35;
         }
-
         header {
-            text-align: center;
-            padding: 60px 20px;
+            background-color: #8c5a44;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
         }
-
-        h1 {
+        header h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: 1.5em;
+            margin: 0;
+        }
+        nav a {
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
             margin-bottom: 10px;
         }
-
-        p.subtitle {
-            font-size: 1.2rem;
-            color: #5c4033;
+        .content {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+            line-height: 1.6;
         }
-
-        .audio-container {
-            background: rgba(255, 255, 255, 0.85);
-            margin: 40px auto;
-            padding: 20px;
-            border-radius: 12px;
-            width: 80%;
-            max-width: 600px;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
         audio {
             width: 100%;
-            outline: none;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #8c5a44;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>Identidad artística y estrategias de visibilidad</h1>
-        <p class="subtitle">Dinámicas de gestión, performatividad y comunicación en plataformas sociales</p>
+        <h1>Tesis Maestría</h1>
+        <nav>
+            <a href="#intro">Introducción</a>
+            <a href="#capsula">Cápsula</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
     </header>
 
-    <div class="audio-container">
-        <h2>Cápsula: ¿Qué es la identidad artística?</h2>
-        <audio controls>
-            <source src="audio/identidad-artistica.mp3" type="audio/mpeg">
-            Tu navegador no soporta la reproducción de audio.
-        </audio>
-    </div>
+    <section class="hero">
+        <h2>Identidad artística y estrategias de visibilidad</h2>
+        <p>Dinámicas de gestión, performatividad y comunicación en plataformas sociales</p>
+    </section>
 
+    <section id="intro" class="content">
+        <h3>Introducción</h3>
+        <p>
+            Este proyecto explora cómo los artistas construyen, gestionan y proyectan su identidad en la industria musical digital,
+            con un enfoque en estrategias comunicativas, performativas y de visibilidad en redes sociales.
+        </p>
+    </section>
+
+    <section id="capsula" class="content">
+        <h3>Cápsula de ejemplo</h3>
+        <p>En esta cápsula exploramos el concepto de identidad artística y su relevancia en la industria musical.</p>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Tu navegador no soporta audio HTML5.
+        </audio>
+    </section>
+
+    <footer>
+        © 2025 Laura Manuela Osorio - Proyecto de Maestría
+    </footer>
 </body>
 </html>
