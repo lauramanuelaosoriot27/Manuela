@@ -4,138 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Identidad artística y estrategias de visibilidad</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --color-bg: #f4f1ee;
+            --color-accent: #a89f91;
+            --color-dark: #3a3a3a;
+            --color-highlight: #7a8b7b;
+            --color-gold: #c1a57b;
+        }
         body {
             margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f7f3ef;
-            color: #4a3f35;
+            font-family: 'Lato', sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-dark);
         }
         header {
-            background-color: #8c5a44;
-            padding: 15px 20px;
+            background: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4') center/cover no-repeat;
+            height: 100vh;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: center;
+            text-align: center;
             color: white;
+            position: relative;
         }
-        header h1 {
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+        }
+        header div {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+        h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5em;
-            margin: 0;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        nav {
+            background: var(--color-accent);
+            padding: 10px;
+            text-align: center;
         }
         nav a {
             color: white;
-            margin-left: 15px;
+            margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
-            cursor: pointer;
+            transition: color 0.3s;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: var(--color-gold);
         }
-        .hero {
-            position: relative;
-            background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-        .hero h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        .content {
-            max-width: 900px;
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
             margin: auto;
-            padding: 40px 20px;
-            line-height: 1.6;
-            display: none;
         }
-        .content.active {
-            display: block;
+        section:nth-child(even) {
+            background-color: #e8e4de;
         }
-        audio {
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
             width: 100%;
-            margin-top: 20px;
+            height: 180px;
+            object-fit: cover;
         }
         footer {
-            background-color: #8c5a44;
+            background: var(--color-dark);
             color: white;
             text-align: center;
-            padding: 15px;
-            margin-top: 30px;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
+    <nav>
+        <a href="#sobre">Sobre el Proyecto</a>
+        <a href="#metodologia">Metodología</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#casos">Casos de Estudio</a>
+        <a href="#propuesta">Propuesta Creativa</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
     <header>
-        <h1>Tesis Maestría</h1>
-        <nav>
-            <a onclick="showSection('intro')">Introducción</a>
-            <a onclick="showSection('capsula')">Cápsula</a>
-            <a onclick="showSection('contacto')">Contacto</a>
-        </nav>
+        <div>
+            <h1>Identidad artística y estrategias de visibilidad</h1>
+            <p>Dinámicas de gestión, performatividad y comunicación en plataformas sociales</p>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h2>Identidad artística y estrategias de visibilidad</h2>
-            <p>Dinámicas de gestión, performatividad y comunicación en plataformas sociales</p>
+    <section id="sobre">
+        <h2>Sobre el Proyecto</h2>
+        <p>Este estudio explora las intersecciones entre identidad artística y estrategias de visibilidad en la industria musical digital, considerando las plataformas sociales como espacios de gestión, performatividad y comunicación estratégica.</p>
+    </section>
+
+    <section id="metodologia">
+        <h2>Metodología</h2>
+        <p>Enfoque mixto con análisis documental, entrevistas y estudio de casos para comprender cómo los artistas gestionan su identidad y visibilidad en entornos digitales.</p>
+    </section>
+
+    <section id="recursos">
+        <h2>Cápsulas / Recursos</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" alt="">
+                <div style="padding:15px;">
+                    <h3>Identidad artística</h3>
+                    <p>Audio introductorio sobre el concepto de identidad artística en la música digital.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="intro" class="content active">
-        <h3>Introducción</h3>
-        <p>
-            Este proyecto explora cómo los artistas construyen, gestionan y proyectan su identidad en la industria musical digital,
-            con un enfoque en estrategias comunicativas, performativas y de visibilidad en redes sociales.
-        </p>
+    <section id="casos">
+        <h2>Casos de Estudio</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1518972559570-7cc1309f3229" alt="">
+                <div style="padding:15px;">
+                    <h3>Artista A</h3>
+                    <p>Resumen breve del caso de estudio.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="capsula" class="content">
-        <h3>Cápsula de ejemplo</h3>
-        <p>En esta cápsula exploramos el concepto de identidad artística y su relevancia en la industria musical.</p>
-        <audio controls>
-            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-            Tu navegador no soporta audio HTML5.
-        </audio>
+    <section id="propuesta">
+        <h2>Propuesta Creativa</h2>
+        <p>Prototipo de guía interactiva para la gestión estratégica de identidad artística en entornos digitales.</p>
     </section>
 
-    <section id="contacto" class="content">
-        <h3>Contacto</h3>
-        <p>Puedes escribir a <a href="mailto:lauramanuelaosoriot27@example.com">lauramanuelaosoriot27@example.com</a> para más información.</p>
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>📧 lauramanuelaosoriot27@example.com</p>
+        <p>🔗 LinkedIn | Instagram | GitHub</p>
     </section>
 
     <footer>
-        © 2025 Laura Manuela Osorio - Proyecto de Maestría
+        <p>&copy; 2025 Laura Manuela Osorio - Proyecto de Maestría</p>
     </footer>
-
-    <script>
-        function showSection(id) {
-            document.querySelectorAll('.content').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(id).classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
 </body>
 </html>
