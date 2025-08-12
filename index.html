@@ -30,17 +30,31 @@
             margin-left: 15px;
             text-decoration: none;
             font-weight: bold;
+            cursor: pointer;
         }
         nav a:hover {
             text-decoration: underline;
         }
         .hero {
+            position: relative;
             background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
             padding: 100px 20px;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
         }
         .hero h2 {
             font-family: 'Playfair Display', serif;
@@ -52,6 +66,10 @@
             margin: auto;
             padding: 40px 20px;
             line-height: 1.6;
+            display: none;
+        }
+        .content.active {
+            display: block;
         }
         audio {
             width: 100%;
@@ -70,18 +88,21 @@
     <header>
         <h1>Tesis Maestría</h1>
         <nav>
-            <a href="#intro">Introducción</a>
-            <a href="#capsula">Cápsula</a>
-            <a href="#contacto">Contacto</a>
+            <a onclick="showSection('intro')">Introducción</a>
+            <a onclick="showSection('capsula')">Cápsula</a>
+            <a onclick="showSection('contacto')">Contacto</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h2>Identidad artística y estrategias de visibilidad</h2>
-        <p>Dinámicas de gestión, performatividad y comunicación en plataformas sociales</p>
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h2>Identidad artística y estrategias de visibilidad</h2>
+            <p>Dinámicas de gestión, performatividad y comunicación en plataformas sociales</p>
+        </div>
     </section>
 
-    <section id="intro" class="content">
+    <section id="intro" class="content active">
         <h3>Introducción</h3>
         <p>
             Este proyecto explora cómo los artistas construyen, gestionan y proyectan su identidad en la industria musical digital,
@@ -98,8 +119,23 @@
         </audio>
     </section>
 
+    <section id="contacto" class="content">
+        <h3>Contacto</h3>
+        <p>Puedes escribir a <a href="mailto:lauramanuelaosoriot27@example.com">lauramanuelaosoriot27@example.com</a> para más información.</p>
+    </section>
+
     <footer>
         © 2025 Laura Manuela Osorio - Proyecto de Maestría
     </footer>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.content').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
